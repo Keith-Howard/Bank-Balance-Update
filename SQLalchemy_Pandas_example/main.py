@@ -3,6 +3,9 @@ import urllib.parse
 from sqlalchemy import create_engine
 
 
+# make sure pyodbc is installed in project for line 37 to work
+
+# There is no SQL injection because there is no User input being used for query
 # input: connection, schema and table name
 # processing: reads and prints table
 # output: prints out table
@@ -11,6 +14,7 @@ def read_sql_table(conn, table, schema):
     return df
 
 
+# There is no SQL injection because there is no User input being used for query
 # input connection, table data
 # processing update balance with transaction table info, use pd.read_sql_query()
 # output: updated balance table
